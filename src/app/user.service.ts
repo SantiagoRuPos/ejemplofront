@@ -20,5 +20,7 @@ export class UserService {
   listarImagenesDocker(): Observable<any> {
     return this.http.get('http://localhost:3000/listar-imagenes-docker');
   }
-  
+  enviarComando(comando: string) {
+    return this.http.post('http://localhost:3000/comando', { comando });
+  }
 }

@@ -1,4 +1,4 @@
-<!-- app.component.html
+
 <div>
   <label for="username">Nombre de usuario:</label>
   <input type="text" id="username" [(ngModel)]="nombreUsuario" placeholder="Nombre de usuario">
@@ -7,10 +7,27 @@
   <label for="password">Contraseña:</label>
   <input type="password" id="password" [(ngModel)]="contrasena" placeholder="Contraseña">
 </div>
-<button (click)="crearUsuario()">Crear Usuario</button> -->
+<button (click)="crearUsuario()">Crear Usuario</button>
 
 <!-- docker.component.html -->
 <div>
   <h2>Imágenes de Docker</h2>
   <pre>{{ imagenes }}</pre>
+</div>
+
+
+<div>
+  <h2>Enviar Comando</h2>
+  <form [formGroup]="comandoForm">
+    <div>
+      <label for="comando">Comando:</label>
+      <input type="text" id="comando" formControlName="comando">
+      <button type="button" (click)="enviarcomando()">Enviar</button>
+    </div>
+    <h2>Resultado</h2>
+    <div *ngIf="resultado">
+      <h3>Resultado:</h3>
+      <pre>{{ resultado }}</pre>
+    </div>
+  </form>
 </div>

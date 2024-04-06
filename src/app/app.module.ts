@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule desde @angular/forms
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { UserService } from './user.service';
 
 @NgModule({
@@ -17,7 +19,8 @@ import { UserService } from './user.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
